@@ -44,4 +44,4 @@ function convertHexDigitToDecimal(digit) {
   return decimal;
 }
 
-module.exports = convertHexToRgb;
+export { convertHexToRgb };

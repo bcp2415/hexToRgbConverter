@@ -1,4 +1,4 @@
 // file to practice importing functions from other modules, calling them, testing them...
-let convertHexToRgb = require("convertHexToRgb");
+import { convertHexToRgb } from "./convertHexToRgb.js";
 
 console.log(convertHexToRgb("#07abdc"));
