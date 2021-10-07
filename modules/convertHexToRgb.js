@@ -1,21 +1,21 @@
 function convertHexToRgb(hexValue) {
-  let hexArray = Array.from(hexColor);
+  let hexArray = Array.from(hexValue);
 
-  let red = [hexArray[1], hexArray[2]];
-  let green = [hexArray[3], hexArray[4]];
-  let blue = [hexArray[5], hexArray[6]];
+  const red = [hexArray[1], hexArray[2]];
+  const green = [hexArray[3], hexArray[4]];
+  const blue = [hexArray[5], hexArray[6]];
 
   // convert each 2-digit value to a decimal number from 0-255
-  let redRgb = hexToRgb(red);
-  let greenRgb = hexToRgb(green);
-  let blueRgb = hexToRgb(blue);
+  let redRgb = convertTwoDigitsHexToTwoDigitsRgb(red);
+  let greenRgb = convertTwoDigitsHexToTwoDigitsRgb(green);
+  let blueRgb = convertTwoDigitsHexToTwoDigitsRgb(blue);
   // assemble string to return:  'rgb(r, g, b)'
   let finalRgb = `rgb(${redRgb}, ${greenRgb}, ${blueRgb})`;
   // return redGreenBlueValue;
   return finalRgb;
 }
 
-function hexToRgb(hexArray) {
+function convertTwoDigitsHexToTwoDigitsRgb(hexArray) {
   let decimalValue = 0;
   let ones = convertHexDigitToDecimal(hexArray[1]);
 
