@@ -3,4 +3,4 @@ import { convertHexToRgb } from "./modules/convertHexToRgb.js";
 import { convertRgbToHex } from "./modules/convertRgbToHex.js";
 
 console.log(convertHexToRgb("#0fddcc"));
-console.log(convertRgbToHex("rgb(100, 100, 100)"));
+console.log(convertRgbToHex("rgb(2, 10, 100)"));
