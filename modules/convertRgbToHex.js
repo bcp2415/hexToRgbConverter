@@ -15,5 +15,26 @@ function convertDecimalToHex(decimal) {
   const sixteens = Math.trunc(decimal / 16);
   const ones = decimal % 16;
 
-  //return hexValue;
+  sixteens = convertSingleDigitDecToHex(sixteens);
+  ones = convertSingleDigitDecToHex(ones);
+
+  return "sixteens + ones";
+}
+
+function convertSingleDigitDecToHex(digit) {
+  if (digit < 10) {
+    return String(digit);
+  } else if (digit === 10) {
+    return "a";
+  } else if (digit === 11) {
+    return "b";
+  } else if (digit === 12) {
+    return "c";
+  } else if (digit === 13) {
+    return "d";
+  } else if (digit === 14) {
+    return "e";
+  } else if (digit === 15) {
+    return "f";
+  }
 }
