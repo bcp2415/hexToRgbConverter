@@ -6,19 +6,17 @@ function convertRgbToHex(string) {
   const green = Number(rgbDataArray[1]);
   const blue = Number(rgbDataArray[2]);
 
-  convertDecimalToHex(blue);
-
-  return `tbd`;
+  return convertDecimalToHex(red);
 }
 
 function convertDecimalToHex(decimal) {
-  const sixteens = Math.trunc(decimal / 16);
-  const ones = decimal % 16;
+  let sixteens = Math.trunc(decimal / 16);
+  let ones = decimal % 16;
 
   sixteens = convertSingleDigitDecToHex(sixteens);
   ones = convertSingleDigitDecToHex(ones);
 
-  return "sixteens + ones";
+  return sixteens + ones;
 }
 
 function convertSingleDigitDecToHex(digit) {
